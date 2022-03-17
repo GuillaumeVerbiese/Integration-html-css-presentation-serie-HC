@@ -1,0 +1,191 @@
+/*============================*/
+/* ===== Style généraux ===== */
+/*============================*/
+body {
+    background-color: #d3d3d3;
+}
+
+.wrapper {
+    background-color: white;
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Oswald', sans-serif;
+}
+
+/*==========================*/
+/* ===== Style Header ===== */
+/*==========================*/
+#logo-header {
+    /* On "transforme" notre balise inline en balise block */
+    display: block;
+    /* On peut donc utiliser la propriété margin pour centrer l'image */
+    margin: auto;
+    width: 20%;
+}
+h1 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    border-top: 2px solid darkred;
+    border-bottom: 2px solid darkred;
+    padding: 10px 0;
+}
+h1 strong {
+    background-color: black;
+    color: white;
+    font-size: 0.3em;
+    padding: 6px 10px;
+}
+
+/*============================*/
+/* ======= Style Main ======= */
+/*============================*/
+main {
+    background-color: lightgray;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+#presentation,
+#synopsis {
+    padding: 0 20px;
+}
+
+/* == Section Présentation == */
+#presentation h2 {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+#presentation img {
+    display: block;
+    margin: 0 0.2em 2em;
+    width: 200px;
+    /* On rend floatante notre image pour que le texte vienne l'habiller (par la droite) */
+    /* https://fr.learnlayout.com/float.html */
+    float: left;
+}
+#intro strong {
+    font-weight: bold;
+}
+#intro {
+    margin: 4.5em 0 0 ;
+}
+#notes {
+    font-size: 0.9em;
+    text-align: center;
+    font-style: italic;
+    padding-top: 20px;
+    border-top: 1px solid;
+    /* On vient retirer le floatant sur la gauche car on veut que cet passe en dessous de l'image flottante */
+    /* https://fr.learnlayout.com/clear.html */
+    clear: left;
+}
+
+/* == Section Synopsis == */
+#synopsis h2 {
+    color: darkred;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 20px 0;
+}
+#synopsis p {
+    margin-bottom: 15px;
+}
+
+/* == Section Acteurs == */
+#acteurs {
+    background-color: white;
+    padding-bottom: 50px;
+}
+#acteurs h2 {
+    padding: 30px 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+#acteurs ul {
+    text-align: center;
+}
+#acteurs li {
+    /* La valeur 'inline-block' permet d'agencer des élèments proprement sur une même ligne et de manière adaptative. */
+    /* https://fr.learnlayout.com/inline-block.html */
+    display: inline-block;
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+}
+/* :hover => pseudo classe qui nous permet d'appliquer du style lors du survol à la souris d'un element */
+#acteurs li:hover {
+    background-color: darkred;
+}
+#acteurs a {
+    /* On "transforme" la balise inline en block afin qu'elle prenne toute la largeur de son parent. Pour pouvoir clic sur le fond gris et ouvrir l'url de la balise 'a' */
+    display: block;
+    color: darkred;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+#acteurs a:hover {
+    color: lightgray;
+}
+/*
+TODO : a tester
+.principaux-acteurs li:hover>a {
+    color: #fff
+}
+*/
+
+/* == Section Images == */
+#images {
+    background-color: white;
+    text-align: center;
+}
+#images h2 {
+    padding: 30px 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.list-articles {
+    /* On rend un element flexible pour nous permettre de faire de la mise en page de manire rapide, clair, efficace et pro */
+    /* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+    display: flex;
+    /* Par défaut, les items présents dans un conteneur flexible vienne t se placer les uns après les autres sur une seule ligne. Ici, on déclenche le retour à la ligne automatiquement */
+    flex-wrap: wrap;
+}
+#images article {
+    border: 1px solid lightgray;
+    margin: 10px auto;
+    padding: 20px 0;
+    width: 40%;
+}
+#images article img {
+    width: 80%;
+}
+#images article h3 {
+    color: darkred;
+    font-size: 1.2em;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+/*==============================*/
+/* ======= Style Footer ======= */
+/*==============================*/
+footer {
+    background-color: lightgray;
+    margin-top: 15px;
+    text-align: center;
+    padding: 30px 0 80px;
+}
